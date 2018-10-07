@@ -9,8 +9,12 @@ from jplephem.spk import SPK
 kernel = SPK.open('/Users/hanvakil/src/ephem/de430.bsp')
 orbital_lengths = [0, 88, 225, 366, 687, 4333, 10759, 30689, 60182, 90560]
 orbital_radii = [0, 0.9, 0.9, 0.95, 1.15, 1.15, 1.2, 1.25, 1.2, 1.75]
+
+# radius of individual planets (eg, Jupiter is bigger than Pluto)
 planet_radii = [0, 0.5, 0.7, 0.7, 0.6, 1.2, 1, 1, 1, 0.4]
 orbit_sides = 500
+
+# radius of planets' orbits
 radius_coefficients = [0, 1, 0.9, 0.95, 0.9, 0.95, 1, 1, 1.05, 1.05]
 def make_orbits(start_date):
     orbits = []
